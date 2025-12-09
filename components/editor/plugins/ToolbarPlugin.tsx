@@ -284,6 +284,8 @@ export default function ToolbarPlugin() {
 >
   {loading ? 'Summarizing...' : 'Summarize'}
 </button>
+
+
   <TextToSpeechButton />
 
 

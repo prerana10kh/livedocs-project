@@ -1,3 +1,15 @@
+// 
+
+
+
+
+
+
+
+
+
+
+
 'use client';
 
 import { SignedIn, UserButton } from '@clerk/nextjs';
@@ -20,8 +32,11 @@ export function CollaborativeRoom({
   roomMetadata,
   users,
   currentUserType,
+  creatorId,
+  email,
+  title,
 }: CollaborativeRoomProps) {
-  const [documentTitle, setDocumentTitle] = useState(roomMetadata.title);
+  const [documentTitle, setDocumentTitle] = useState(title || roomMetadata.title);
   const [editing, setEditing] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -135,7 +150,14 @@ export function CollaborativeRoom({
             </div>
           </Header>
 
-          <Editor roomId={roomId} currentUserType={currentUserType} />
+          {/* IMPORTANT: pass real data to Editor */}
+          <Editor
+            roomId={roomId}
+            currentUserType={currentUserType}
+            creatorId={creatorId}
+            email={email}
+            title={documentTitle}
+          />
         </div>
       </ClientSideSuspense>
     </RoomProvider>

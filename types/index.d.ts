@@ -63,12 +63,26 @@ declare type CollaboratorProps = {
   user: User;
 };
 
+// declare type CollaborativeRoomProps = {
+//   roomId: string;
+//   roomMetadata: RoomMetadata;
+//   users: User[];
+//   currentUserType: UserType;
+// };
+
+
+
+
 declare type CollaborativeRoomProps = {
   roomId: string;
   roomMetadata: RoomMetadata;
   users: User[];
   currentUserType: UserType;
+  creatorId: string;
+  email: string;
+  title: string;
 };
+
 
 declare type AddDocumentBtnProps = {
   userId: string;

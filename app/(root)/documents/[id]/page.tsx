@@ -34,6 +34,22 @@ const Document = async ({ params: { id } }: SearchParamProps) => {
     ? 'editor'
     : 'viewer';
 
+//   return (
+//     <main className="flex w-full flex-col items-center">
+//       <CollaborativeRoom
+//         roomId={id}
+//         roomMetadata={room.metadata}
+//         users={usersData}
+//         currentUserType={currentUserType}
+//       />
+//     </main>
+//   );
+// };
+
+
+
+
+
   return (
     <main className="flex w-full flex-col items-center">
       <CollaborativeRoom
@@ -41,9 +57,13 @@ const Document = async ({ params: { id } }: SearchParamProps) => {
         roomMetadata={room.metadata}
         users={usersData}
         currentUserType={currentUserType}
+        creatorId={clerkUser.id}                                     
+        email={clerkUser.emailAddresses[0].emailAddress}              
+        title={room.metadata.title}                                   
       />
     </main>
   );
 };
+
 
 export default Document;
