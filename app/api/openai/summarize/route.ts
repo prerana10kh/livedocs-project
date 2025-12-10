@@ -5,7 +5,8 @@
 // const GEMINI_API_BASE_URL = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_API_MODEL}:generateContent`;
 
 // /**
-//  * Handles POST requests to the summarization API route using the Google Gemini API.
+//  * Handles POST requests to the 
+// zation API route using the Google Gemini API.
 //  * Expects a JSON body with a 'text' property containing the text to summarize.
 //  * * NOTE: This route now requires the GEMINI_API_KEY environment variable to be set.
 //  * * @param request The incoming NextRequest object.
